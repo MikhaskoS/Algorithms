@@ -131,7 +131,7 @@ namespace Lesson01
                     Console.WriteLine($"{i}*{i}={i * i}");
             }
         }
-        #region способ1 (с массивами _ долго)
+        #region способ 1 (с массивами _ долго)
         public static bool AutomorphicNumbersTest(int s1, int s2)
         {
             if (s2 < s1) return false;
