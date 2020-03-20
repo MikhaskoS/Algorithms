@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Utility
 {
-    public class Input
+    public static class Input
     {
         // обработка ввода данных
         public static double InputCorrectData(string message, double min = Double.MinValue, double max = Double.MaxValue)
@@ -48,6 +48,11 @@ namespace Utility
             Console.ForegroundColor = ConsoleColor.Green;
         }
 
+        public static void Print(this int[] ar)
+        {
+            foreach (int i in ar)
+                Console.Write(i);
+        }
         
     }
 }
