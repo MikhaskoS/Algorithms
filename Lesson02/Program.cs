@@ -13,7 +13,7 @@ namespace Lesson02
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             Task1();
             Input.Clear();
@@ -29,7 +29,7 @@ namespace Lesson02
         public static void Task1()
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            int dec = 99999;
+            int dec = 999999;
             int b = 2;
             int[] res = Convert(dec, b);
             Console.WriteLine($"{dec} по основанию {b}:");
@@ -40,11 +40,11 @@ namespace Lesson02
         public static int[] Convert(int dec, int b)
         {
             int flag = -1;
-            int[] res = new int[4]; // начальный размер массива
+            int[] res = new int[4]; // начальный размер массива (может быть любым)
             res[0] = flag;
-            DtoB(dec, ref res, b); // например [0011011-10]
+            DtoB(dec, ref res, b); // например результата: 50_2-> [00110010-10]
 
-            // сдвигаем элементы массива вправо [0011011-10] -> [000011011]
+            // сдвигаем элементы массива вправо [0011011-10] -> [00110010]
             // выясним положение флага (лучше с конца)
             int index = 0;
             for (int i = res.Length - 1; i > 0; i--)

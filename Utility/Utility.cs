@@ -51,8 +51,30 @@ namespace Utility
         public static void Print(this int[] ar)
         {
             foreach (int i in ar)
-                Console.Write(i);
+                Console.Write(i + " ");
+
+            Console.WriteLine();
         }
-        
+
+
+        public static int[] GetRandomArray(int num, int min, int max)
+        {
+            int[] ar = new int[num];
+            Random rnd = new Random();
+            for (int i = 0; i < ar.Length; i++)
+                ar[i] = rnd.Next(min, max);
+
+            return ar;
+        }
+
+        public static int[] CopyArrray(this int[] ar)
+        {
+            int[] res = new int[ar.Length];
+            for (int i = 0; i < ar.Length; i++)
+            {
+                res[i] = ar[i];
+            }
+            return res;
+        }
     }
 }
