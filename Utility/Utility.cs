@@ -56,6 +56,20 @@ namespace Utility
             Console.WriteLine();
         }
 
+        public static void Print(this int[,] ar)
+        {
+            int N = ar.GetLength(0);
+            int M = ar.GetLength(1);
+
+            for (int i = 0; i < N; i++)
+            {
+                for (int j = 0; j < M; j++)
+                    Console.Write(ar[i, j] + "\t");
+
+                Console.WriteLine("\n");
+            }
+
+        }
 
         public static int[] GetRandomArray(int num, int min, int max)
         {
@@ -75,6 +89,16 @@ namespace Utility
                 res[i] = ar[i];
             }
             return res;
+        }
+
+        public static int[,] GetZerro(int N, int M)
+        {
+            int[,] ar = new int[N, M];
+            for (int i = 0; i < N; i++)
+                for (int j = 0; j < M; j++)
+                    ar[i, j] = 0;
+            return ar;
+            
         }
     }
 }
