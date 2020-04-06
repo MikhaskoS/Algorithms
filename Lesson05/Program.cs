@@ -83,7 +83,7 @@ namespace Lesson05
                 }
                 catch (OutOfMemoryException ex)
                 {
-                    Console.WriteLine("Переполнение !!!");
+                    Console.WriteLine($"Переполнение !!! {ex}");
                     break;
                 }
             }
