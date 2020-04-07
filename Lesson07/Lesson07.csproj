@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{64E4FE21-6990-4611-B0E2-AFAA1EF7E49A}</ProjectGuid>
+    <ProjectGuid>{C5B405F9-1FE7-4757-B4B1-BE171A48E7E2}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Lesson06</RootNamespace>
-    <AssemblyName>Lesson06</AssemblyName>
+    <RootNamespace>Lesson07</RootNamespace>
+    <AssemblyName>Lesson07</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,8 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BinaryTree.cs" />
-    <Compile Include="BinaryTreeArray.cs" />
+    <Compile Include="Graph.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
