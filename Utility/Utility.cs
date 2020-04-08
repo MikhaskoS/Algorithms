@@ -61,14 +61,21 @@ namespace Utility
             int N = ar.GetLength(0);
             int M = ar.GetLength(1);
 
+            Console.Write("\t");
             for (int i = 0; i < N; i++)
             {
+                Console.Write($"[{i}]" + "\t");
+            }
+            Console.WriteLine();
+
+            for (int i = 0; i < N; i++)
+            {
+                Console.Write($"[{i}]" + "\t");
                 for (int j = 0; j < M; j++)
                     Console.Write(ar[i, j] + "\t");
 
                 Console.WriteLine("\n");
             }
-
         }
 
         public static int[] GetRandomArray(int num, int min, int max)
