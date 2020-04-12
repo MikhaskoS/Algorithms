@@ -36,7 +36,7 @@ namespace Lesson04
                 { 1,1,1,1,1},
                 { 1,1,1,1,1} };
             Console.WriteLine("mask:");
-            mask.Print();
+            mask.PrintArray();
             Console.WriteLine(new string('+', 35));
             Obstacles(mask);
         }
@@ -60,7 +60,7 @@ namespace Lesson04
                     A[i, j] = (mask[i, j] == 1) ? A[i, j - 1] + A[i - 1, j] : 0;
             }
 
-            A.Print();
+            A.PrintArray();
         }
         public static void NoObstacles()
         {
@@ -77,7 +77,7 @@ namespace Lesson04
                     A[i, j] = A[i, j - 1] + A[i - 1, j];
             }
 
-            A.Print();
+            A.PrintArray();
         }
 
 
@@ -95,14 +95,14 @@ namespace Lesson04
 
         public static void Knight(int N, int M)
         {
-            int[,] board = Utility.Input.GetZerro(N, M);
+            int[,] board = Utility.Input.GetZerroArray(N, M);
 
             int x_start = 0;
             int y_start = 0;
 
             SetKnight(x_start, y_start, ref board);
 
-            board.Print();
+            board.PrintArray();
         }
 
         // можно ли ходить

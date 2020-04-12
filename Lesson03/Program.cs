@@ -26,13 +26,13 @@ namespace Lesson03
         public static void Task01()
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            int[] ar1 = Input.GetRandomArray(10, 1, 50);  // тестовый массив
+            int[] ar1 = ArraysUtility.GenerateArray(10, 1, 50);  // тестовый массив
             int[] ar2 = ar1.CopyArrray();
-            ar1.Print();
+            ar1.PrintArray();
 
             int c1 = BubbleSort(ar1);
             int c2 = BubbleSortOptimize(ar2);
-            ar1.Print();
+            ar1.PrintArray();
 
             Console.WriteLine($"Итераций (обычная сортировка): {c1}");
             Console.WriteLine($"Итераций (оптимизированная сортировка): {c2}");
@@ -99,12 +99,12 @@ namespace Lesson03
         public static void Task02()
         {
             Console.WriteLine("Шейкерная сортировка.");
-            int[] ar = Input.GetRandomArray(10, 1, 50);
-            ar.Print();
+            int[] ar =ArraysUtility.GenerateArray(10, 1, 50);
+            ar.PrintArray();
 
 
             ShakerSort(ar);
-            ar.Print();
+            ar.PrintArray();
         }
 
         #region
@@ -143,9 +143,9 @@ namespace Lesson03
          * индекс найденного элемента или -1, если элемент не найден*/
         public static void Task03()
         {
-            int[] ar = Input.GetRandomArray(10, 1, 20);
+            int[] ar = ArraysUtility.GenerateArray(10, 1, 20);
             BubbleSort(ar);
-            ar.Print();
+            ar.PrintArray();
 
             int findelement = 5;
             Console.WriteLine($"find:{findelement} index = [{ BinarySearch(ar, findelement)}]");

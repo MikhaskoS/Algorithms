@@ -33,7 +33,7 @@ namespace Lesson02
             int b = 2;
             int[] res = Convert(dec, b);
             Console.WriteLine($"{dec} по основанию {b}:");
-            res.Print();
+            res.PrintArray();
         }
         #region
         /// <summary> Преобразование десятичного числа dec в другую систему по основанию b </summary>

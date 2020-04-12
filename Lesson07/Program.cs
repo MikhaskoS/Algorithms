@@ -39,7 +39,7 @@ namespace Lesson07
             // Построение матрицы и списка смежностей
             graph.ReadAdjMatrix(matrix);
 
-            graph.MatrixAdj.Print();
+            graph.MatrixAdj.PrintArray();
 
             // Список смежностей
             graph.PrintVertexAdj();
@@ -66,7 +66,7 @@ namespace Lesson07
             Graph graph = new Graph(6);
             // Построение матрицы и списка смежностей
             graph.ReadAdjMatrix(matrix);
-            graph.MatrixAdj.Print();
+            graph.MatrixAdj.PrintArray();
             // Список смежностей
             graph.PrintVertexAdj();
 
@@ -95,7 +95,7 @@ namespace Lesson07
             Graph graph = new Graph(8);
             // Построение матрицы и списка смежностей
             graph.ReadAdjMatrix(matrix);
-            graph.MatrixAdj.Print();
+            graph.MatrixAdj.PrintArray();
             // Список смежностей
             graph.PrintVertexAdj();
 
@@ -132,7 +132,7 @@ namespace Lesson07
             Graph graph = new Graph(9);
             // Построение матрицы и списка смежностей
             graph.ReadAdjMatrix(matrix);
-            graph.MatrixAdj.Print();
+            graph.MatrixAdj.PrintArray();
             // Список смежностей
             graph.PrintVertexAdj();
 

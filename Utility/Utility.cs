@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Utility
 {
     public static class Input
     {
+        #region Console
+
         // обработка ввода данных
         public static double InputCorrectData(string message, double min = Double.MinValue, double max = Double.MaxValue)
         {
@@ -48,64 +46,6 @@ namespace Utility
             Console.ForegroundColor = ConsoleColor.Green;
         }
 
-        public static void Print(this int[] ar)
-        {
-            foreach (int i in ar)
-                Console.Write(i + " ");
-
-            Console.WriteLine();
-        }
-
-        public static void Print(this int[,] ar)
-        {
-            int N = ar.GetLength(0);
-            int M = ar.GetLength(1);
-
-            Console.Write("\t");
-            for (int i = 0; i < N; i++)
-            {
-                Console.Write($"[{i}]" + "\t");
-            }
-            Console.WriteLine();
-
-            for (int i = 0; i < N; i++)
-            {
-                Console.Write($"[{i}]" + "\t");
-                for (int j = 0; j < M; j++)
-                    Console.Write(ar[i, j] + "\t");
-
-                Console.WriteLine("\n");
-            }
-        }
-
-        public static int[] GetRandomArray(int num, int min, int max)
-        {
-            int[] ar = new int[num];
-            Random rnd = new Random();
-            for (int i = 0; i < ar.Length; i++)
-                ar[i] = rnd.Next(min, max);
-
-            return ar;
-        }
-
-        public static int[] CopyArrray(this int[] ar)
-        {
-            int[] res = new int[ar.Length];
-            for (int i = 0; i < ar.Length; i++)
-            {
-                res[i] = ar[i];
-            }
-            return res;
-        }
-
-        public static int[,] GetZerro(int N, int M)
-        {
-            int[,] ar = new int[N, M];
-            for (int i = 0; i < N; i++)
-                for (int j = 0; j < M; j++)
-                    ar[i, j] = 0;
-            return ar;
-            
-        }
+        #endregion
     }
 }
